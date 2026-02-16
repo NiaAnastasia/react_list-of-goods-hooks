@@ -1,8 +1,7 @@
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import cn from 'classnames';
 import 'bulma/css/bulma.css';
 import './App.scss';
-import React from 'react';
 
 enum SortType {
   None = '',
@@ -23,7 +22,7 @@ export const goodsFromServer = [
   'Garlic',
 ];
 
-export const App: React.FC = () => {
+export const DisplayGoods: React.FC = () => {
   const [sortBy, setSortBy] = useState<SortType>(SortType.None);
 
   const [isReversed, setIsReversed] = useState(false);
